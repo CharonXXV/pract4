@@ -13,7 +13,13 @@ public class ShapeFactory {
    public Paint paint;
    public int width = 25;
    public int height = 25;
-
+   /**
+    * Instantiates a new Shape factory.
+    *  This metod that determines the type and color of the figure
+    *  @param shape_type type shape you create
+    *  @throws Error not support shape.
+    *
+    */
    public ShapeFactory(int shape_type) {
       switch(shape_type / 10) {
       case 1:
@@ -66,7 +72,14 @@ public class ShapeFactory {
       }
 
    }
-
+   /**
+    * Create object shape Star
+    * @param arms    number top.
+    * @param center  Center point.
+    * @param rOuter  radius in.
+    * @param rInner  radius out.
+    * @return Object Shape - Star.
+    */
    private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
       double angle = 3.141592653589793D / (double)arms;
       GeneralPath path = new GeneralPath();

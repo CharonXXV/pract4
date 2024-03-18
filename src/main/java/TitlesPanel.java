@@ -28,7 +28,12 @@ public class TitlesPanel extends JPanel implements ActionListener {
       }
 
    }
-
+   /**
+    * The doDrawing method is used to draw animated shapes on the panel.
+    *
+    * @param g Graphics
+    * @return null
+    */
    private void doDrawing(Graphics g) {
       this.is_done = false;
       (this.g2d = (Graphics2D)g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -58,7 +63,12 @@ public class TitlesPanel extends JPanel implements ActionListener {
 
       this.is_done = true;
    }
-
+   /**
+    * Instantiates a new Titles panel.
+    *
+    * @param g Graphics
+    * @return null
+    */
    public void paintComponent(Graphics g) {
       super.paintComponent(g);
       this.doDrawing(g);
